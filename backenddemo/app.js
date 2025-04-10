@@ -1,15 +1,30 @@
-import express from "express";
+const express = require('express')
 const app = express();
-import sellerRouter from "./routes/sellerroutes.js";
-import connectDB from "./config/mongodb.js";
-import bodyParser from "body-parser";
-import 'dotenv/config'
+const  sellerRouter = require ("./routes/sellerroutes");
+const connectDB =  require("./config/mongodb");
+const bodyParser = require('body-parser')
+require('dotenv').config();
+const port = process.env.PORT || 8090;
+const cors = require('cors')
+const path = require('path')
+
+const clientbuild = path.join(__dirname,"../democloud/build")
+
+
+
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.static(clientbuild));
+app.use(cors({
+    origin: "*" ,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  }));
 
 
-const port = process.env.PORT || 8090;
+
+
 connectDB();
 
 

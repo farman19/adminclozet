@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const  mongoose = require ("mongoose");
 
 const connectDB = async ()=>{
     mongoose.connection.on('connected',()=>
@@ -7,4 +7,4 @@ const connectDB = async ()=>{
   await mongoose.connect(`${process.env.MONGODB_URI}/sellerinfo` );
 }
 
-export default connectDB;
+module.exports = connectDB;

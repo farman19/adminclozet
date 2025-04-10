@@ -1,4 +1,4 @@
-import addsellerModle from "../modelsschema/addseller.js";
+const  addsellerModle = require( "../modelsschema/addseller");
 
 const addsellers = async (req, res) => {
     console.log("reqdata ====> ", req.body, "========");
@@ -47,4 +47,4 @@ const getsellersinfo = async (req, res) => {
         res.status(500).json({ message: 'Error fetching products' });  // Send an error response
     }
 }
-export { addsellers, getsellersinfo };
+module.exports = { addsellers, getsellersinfo };

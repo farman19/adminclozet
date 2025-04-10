@@ -69,7 +69,7 @@ const AddNewSeller = ()=>{
     }
 
     try {
-      const response = await axios.post('/api/addnewseller', formData, {
+      const response = await axios.post('http://localhost:8090/api/addnewseller', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

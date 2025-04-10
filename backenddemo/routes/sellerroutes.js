@@ -1,6 +1,7 @@
-import express  from 'express';
-import { addsellers, getsellersinfo } from '../controllers/addseller.js';
-import upload from '../middleware/multer.js';
+
+const express  = require ( 'express');
+const { addsellers, getsellersinfo }= require ('../controllers/addseller');
+const upload = require ('../middleware/multer');
 
 const sellerRouter = express.Router();
 
@@ -8,4 +9,5 @@ const sellerRouter = express.Router();
 sellerRouter.post('/addnewseller', upload.single('sellerimage'), addsellers);
 sellerRouter.get('/getsellersinfo',getsellersinfo)
 
-export default sellerRouter;
+
+module.exports = sellerRouter;

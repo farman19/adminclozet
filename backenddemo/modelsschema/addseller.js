@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require ( "mongoose");
 
 const addsellerSechema = new mongoose.Schema({
     firstname: { type: String, required: true },
@@ -16,4 +16,4 @@ const addsellerSechema = new mongoose.Schema({
 })
 
 const addsellerModle = mongoose.model("sellerinfos",addsellerSechema);
-export default addsellerModle;
+module.exports = addsellerModle;
