@@ -8,7 +8,7 @@ const port = process.env.PORT || 8090;
 const cors = require('cors')
 const path = require('path')
 
-const clientbuild = path.join(__dirname,"../democloud/build")
+const clientbuild = path.join(__dirname,"../democloud/build/home")
 
 
 
