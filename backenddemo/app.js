@@ -8,18 +8,22 @@ const port = process.env.PORT || 8090;
 const cors = require('cors')
 const path = require('path')
 
-const clientbuild = path.join(__dirname,"../democloud/build/home")
+
+
+
 
 
 
 
 app.use(express.json());
+
+const clientbuild = path.join(__dirname,"../democloud/build")
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(clientbuild));
 app.use(cors({
     origin: "*" ,
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    // methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    // allowedHeaders: ['Content-Type', 'Authorization']
   }));
 
 
