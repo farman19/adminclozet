@@ -48,7 +48,7 @@ const getsellersinfo = async (req, res) => {
     }
 }
 
-const gettest = async (req, res)=>{
+const gettest =  (req, res)=>{
     res.send('api working on live host!')
 }
 module.exports = { addsellers, getsellersinfo, gettest };
