@@ -47,4 +47,8 @@ const getsellersinfo = async (req, res) => {
         res.status(500).json({ message: 'Error fetching products' });  // Send an error response
     }
 }
-module.exports = { addsellers, getsellersinfo };
+
+const gettest = async (req, res)=>{
+    res.send('api working on live host!')
+}
+module.exports = { addsellers, getsellersinfo, gettest };
