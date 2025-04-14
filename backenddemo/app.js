@@ -36,7 +36,7 @@ connectDB();
 //     res.render(clientbuild)
 // })
 
-app.use('/api',sellerRouter)
+app.use(sellerRouter)
 
 
 

@@ -8,7 +8,7 @@ const sellerRouter = express.Router();
 
 sellerRouter.post('/addnewseller', upload.single('sellerimage'), addsellers);
 sellerRouter.get('/getsellersinfo',getsellersinfo)
-sellerRouter.get('/test',gettest)
+sellerRouter.get('/api/test',gettest)
 
 
 module.exports = sellerRouter;
