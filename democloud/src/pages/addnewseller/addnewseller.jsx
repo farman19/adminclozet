@@ -52,6 +52,7 @@ const AddNewSeller = ()=>{
 
   const handleadd = async (e) => {
     e.preventDefault();
+    
 
     const formData = new FormData();
     formData.append('firstname', addseller.firstname);
