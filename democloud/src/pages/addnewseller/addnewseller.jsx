@@ -8,7 +8,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { Button } from "@mui/material"; 
-import cors from 'cors'
+import axios from 'axios'
 
 
 
@@ -71,7 +71,7 @@ const AddNewSeller = ()=>{
 
     try {
       console.log('inside try ')
-      const response = await cors.post('http://34.207.65.160:8090/api/addnewseller', formData, {
+      const response = await axios.post('http://34.207.65.160:8090/api/addnewseller', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

@@ -8,7 +8,7 @@ import { LuUserRoundCog } from "react-icons/lu";
 import { CgAdd } from "react-icons/cg";
 import { Link } from 'react-router-dom';
 import { LuEye } from "react-icons/lu";
-import cors from 'cors'
+import axios from 'axios'
 
 const SellerList = () => {
     const [sellerinfo, setSellerinfo] = useState([]);
@@ -17,7 +17,7 @@ const SellerList = () => {
 
     useEffect(() => {
         // Fetching seller data
-        cors.get('http://34.207.65.160:8090/api/getsellersinfo')
+        axios.get('http://34.207.65.160:8090/api/getsellersinfo')
             .then(response => {
                 setSellerinfo(response.data);
                 setFilteredSellers(response.data); 
